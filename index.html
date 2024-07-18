@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Invitación de Boda</title>
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="script.js"></script>
+</head>
+<body>
+    <header>
+        <h1>Invitación de Boda</h1>
+        <p>Nombre de los Novios</p>
+        <nav>
+            <ul>
+                <li><a href="#rsvp">Confirmar Asistencia</a></li>
+                <li><a href="#reserve">Reservar Habitación</a></li>
+                <li><a href="#photos">Subir Fotos</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="container">
+        <section id="rsvp">
+            <h2>Confirmar Asistencia</h2>
+            <form id="rsvpForm">
+                <label for="name">Nombre:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="attendance">¿Asistirás a la boda?</label>
+                <select id="attendance" name="attendance" required>
+                    <option value="yes">Sí</option>
+                    <option value="no">No</option>
+                </select>
+
+                <button type="submit" class="button">Enviar</button>
+            </form>
+        </section>
+        <section id="reserve">
+            <h2>Reservar Habitación</h2>
+            <form id="reserveForm">
+                <label for="nameReserve">Nombre:</label>
+                <input type="text" id="nameReserve" name="nameReserve" required>
+
+                <label for="emailReserve">Email:</label>
+                <input type="email" id="emailReserve" name="emailReserve" required>
+
+                <label for="roomType">Tipo de habitación:</label>
+                <select id="roomType" name="roomType" required>
+                    <option value="single">Individual</option>
+                    <option value="double">Doble</option>
+                    <option value="suite">Suite</option>
+                </select>
+
+                <button type="submit" class="button">Reservar</button>
+            </form>
+        </section>
+        <section id="photos">
+            <h2>Subir Fotos</h2>
+            <form action="#" method="post" enctype="multipart/form-data">
+                <label for="photo">Selecciona una foto para subir:</label>
+                <input type="file" id="photo" name="photo" accept="image/*" required>
+
+                <button type="submit" class="button">Subir Foto</button>
+            </form>
+        </section>
+    </div>
+    <footer>
+        <p>&copy; 2024 Nombre de los Novios. Todos los derechos reservados.</p>
+    </footer>
+</body>
+</html>
